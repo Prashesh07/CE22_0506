@@ -4,7 +4,7 @@
 class BST
 {
     virtual bool isEmpty() = 0;
-    virtual void addBST(int ) = 0;
+    virtual void addBST(int,int ) = 0;
     virtual bool removeBST(int ) = 0;
     virtual bool searchBST(int ) = 0; 
 };
