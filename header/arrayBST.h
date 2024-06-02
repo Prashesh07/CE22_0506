@@ -1,29 +1,19 @@
+#pragma once
 #include "interface.h"
-#ifndef arrayBST_h
-#define arrayBST_h
 
+const int MAX_SIZE = 100;
 
-class ArrayNode
+class ArrayBST : public BST
 {
-    int key;
-    int value;
-    ArrayNode(int key ,int value) : key(key),value(value) {}
+private:
+    int nodes[MAX_SIZE];
+    int size;
+
+public:
+    ArrayBST();
+    bool isEmpty();
+    void add(int data);
+    void remove(int data);
+    bool search(int data);
+    
 };
-
-class ArrayBinarySearchTree : public BST
-{   
-    public:
-    ArrayBinarySearchTree(){};
-    ~ArrayBinarySearchTree(){};
-     bool isEmpty() ;
-     void addBST(int key,int value ) ;
-     bool removeBST(int ) ;
-     bool searchBST(int ) ;
-
-    private:
-     
-
-};
-
-
-#endif
