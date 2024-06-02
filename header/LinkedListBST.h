@@ -1,34 +1,16 @@
+#pragma once
 #include "interface.h"
-#ifndef LinkedListBST_h
-#define LinkedListBST_h
+#include "Node.h"
 
-class Node{
-    public:
-        int info;
-        Node *left;
-        Node *right;
-        Node *parent;
+class LinkedListBST : public BST
+{
+private:
+    Node *ROOT;
 
-        Node(){
-            left = nullptr;
-            right = nullptr;
-            parent = nullptr;
-        }
-        ~Node(){}
+public:
+    LinkedListBST();
+    bool isEmpty();
+    void add(int data);
+    void remove(int data);
+    bool search(int data);
 };
-
-class LinkedListBST : public BST {
-    protected:
-        Node *root;
-    public:
-        LinkedListBST(){root = nullptr;}
-        ~LinkedListBST(){}
-        bool isEmpty();
-        void addBST(int data);
-        bool removeBST(int data);
-        bool searchBST(int data);
-};
-
-
-
-#endif
